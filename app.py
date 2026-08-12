@@ -11,7 +11,8 @@ st.set_page_config(page_title="AI Conversational Assistant", page_icon="🤖")
 st.title("🤖 AI Conversational Assistant")
 
 # Check for API Key
-api_key = os.getenv("GEMINI_API_KEY")
+# Replace your current api_key line with this:
+api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 if not api_key:
     st.error("Missing GEMINI_API_KEY in .env file.")
     st.stop()
